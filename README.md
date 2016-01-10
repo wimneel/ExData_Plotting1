@@ -39,13 +39,15 @@ varies over a 2-day period in February, 2007. All plots are constructed
 using the base plotting system.
 
 The four plots show the following:
-1. Histogram of "Global Active Power"
-2. "Global Active Power" as a function of time
-3. The three sub metering variables as a function of time
-4. Four graphs in a 2x2 layout:
-	a) as plot 2, but with slightly different y-axis label
-	b) "Voltage" as a function of time
-	c) as plot 3, but without the box around the legend
-	d) "Global reactive power" as a function of time.
+<ol>
+<li>Histogram of "Global Active Power"</li>
+<li>"Global Active Power" as a function of time</li>
+<li>The three sub metering variables as a function of time</li>
+<li>Four graphs in a 2x2 layout:
+	<li>as plot 2, but with slightly different y-axis label</li>
+	<li>"Voltage" as a function of time</li>
+	<li>as plot 3, but without the box around the legend</li>
+	<li>"Global reactive power" as a function of time.</li>
+	</li>
 
 
