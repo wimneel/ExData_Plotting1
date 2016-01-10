@@ -44,10 +44,13 @@ The four plots show the following:
 <li>"Global Active Power" as a function of time</li>
 <li>The three sub metering variables as a function of time</li>
 <li>Four graphs in a 2x2 layout:
+	<ul>
 	<li>as plot 2, but with slightly different y-axis label</li>
 	<li>"Voltage" as a function of time</li>
 	<li>as plot 3, but without the box around the legend</li>
 	<li>"Global reactive power" as a function of time.</li>
+	</ul>
 	</li>
+</ol>
 
 
