@@ -32,7 +32,7 @@ web site</a>:
 <li><b>Sub_metering_3</b>: energy sub-metering No. 3 (in watt-hour of active energy). It corresponds to an electric water-heater and an air-conditioner.</li>
 </ol>
 
-## Making Plots
+## The four plots
 
 Our overall goal here is simply to examine how household energy usage
 varies over a 2-day period in February, 2007. All plots are constructed
@@ -44,12 +44,12 @@ The four plots show the following:
 <li>"Global Active Power" as a function of time</li>
 <li>The three sub metering variables as a function of time</li>
 <li>Four graphs in a 2x2 layout:
-	<ul>
+	<ol>
 	<li>as plot 2, but with slightly different y-axis label</li>
 	<li>"Voltage" as a function of time</li>
 	<li>as plot 3, but without the box around the legend</li>
 	<li>"Global reactive power" as a function of time.</li>
-	</ul>
+	</ol>
 	</li>
 </ol>
 
