@@ -3,9 +3,9 @@ Sys.setlocale("LC_TIME", "English")
 
 # Download and unzip the data file, if you have not yet done so. This should create 
 # a file called "household_power_consumption.txt" in your working directory.
-# url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
-# download.file(url, "temp.zip")
-# unzip("temp.zip")
+url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
+download.file(url, "temp.zip")
+unzip("temp.zip")
 
 # Read the data into a data.frame and define the class of each variable
 # This might take a while because the file is big
@@ -31,5 +31,5 @@ lines(ener$datetime, ener$Sub_metering_2, col = "red")
 lines(ener$datetime, ener$Sub_metering_3, col = "blue")
 legend("topright", 
        legend = names(ener[7:9]),
-       col = c("black", "red", "blue"), lty = 1, cex = 0.9)
+       col = c("black", "red", "blue"), lty = 1)
 dev.off()
