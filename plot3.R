@@ -18,7 +18,7 @@ ener <- subset(energy, Date == "1/2/2007" | Date == "2/2/2007")
 rm(energy)
 
 # Now concatenate the Date and Time variables into a new datetime variable
-ener$datetime <- paste0(ener$Date, ener$Time)
+ener$datetime <- paste(ener$Date, ener$Time)
 ener$datetime <- strptime(ener$datetime, "%d/%m/%Y %H:%M:%S")
 
 # Set graphic device to PNG and plot the three Submetering variables as a function 
