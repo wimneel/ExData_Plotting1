@@ -9,14 +9,12 @@ This assignment uses data from the
 <a href="http://archive.ics.uci.edu/ml/">UC Irvine Machine
 Learning Repository</a>.
 
-The dataset is downloaded from here: <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> and contains measurements of electric power consumption in
-one household with a one-minute sampling rate over a period of almost
-4 years. 
+The dataset is downloaded from <a href="https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">Electric power consumption</a> and contains measurements of electric power consumption in
+one household with a one-minute sampling rate over a period of almost 4 years. 
 
 ## Variables
 
-The following descriptions of the 9 variables in the dataset are taken
-from
+The following descriptions of the 9 variables in the dataset are taken from
 the <a href="https://archive.ics.uci.edu/ml/datasets/Individual+household+electric+power+consumption">UCI
 web site</a>:
 
@@ -34,7 +32,7 @@ web site</a>:
 
 ## The four plots
 
-Our overall goal here is simply to examine how household energy usage
+Our overall goal here is to examine how household energy usage
 varies over a 2-day period in February, 2007. All plots are constructed
 using the base plotting system.
 
