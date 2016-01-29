@@ -8,7 +8,7 @@ url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_co
 download.file(url, "temp.zip")
 unzip("temp.zip")
 
-# Read the data into a data.frame and define the class of each variable.
+# Read the data into a data.frame.
 # This might take a while because the file is big.
 energy <- read.table("household_power_consumption.txt", header = TRUE, sep = ";", 
                      na.strings = "?", stringsAsFactors = FALSE)
