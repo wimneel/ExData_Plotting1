@@ -17,24 +17,24 @@ energy <- read.table("household_power_consumption.txt", header = TRUE, sep = ";"
 ener <- subset(energy, Date == "1/2/2007" | Date == "2/2/2007")
 rm(energy)
 
-# Now concatenate the Date and Time variables into a new datetime variable.
+# Concatenate the Date and Time variables into a new variable called datetime.
 ener$datetime <- paste(ener$Date, ener$Time)
 ener$datetime <- strptime(ener$datetime, "%d/%m/%Y %H:%M:%S")
 
-# Set graphic device to PNG and plot four graphs in a 2x2 layout. Save the result 
-# as a 480 x 480 pixel PNG file called plot4.png.
-png("plot5.png")
-par(mfrow = c(2 ,2))
+# Set graphics device to PNG and plot four graphs in a 2x2 layout. Save the result 
+# as a 480 x 480 pixel (the default) PNG file called plot4.png.
+png("plot4.png")
+par(mfrow = c(2, 2))
 
-# Top left - Plot "Global Active Power" as a function of time
+# Top left - plot "Global Active Power" as a function of time
 plot(ener$datetime, ener$Global_active_power, type = "l", xlab = "",
      ylab = "Global Active Power")
 
-# Top right - Plot "Voltage" as a function of time
+# Top right - plot "Voltage" as a function of time
 plot(ener$datetime, ener$Voltage, type = "l", xlab = "datetime",
      ylab = "Voltage")
 
-# Bottom left - Plot the three Submetering variables as a function of time
+# Bottom left - plot the three Submetering variables as a function of time
 plot(ener$datetime, ener$Sub_metering_1, type = "l", xlab = "",
      col = "black", ylab = "Energy sub metering")
 lines(ener$datetime, ener$Sub_metering_2, col = "red")
@@ -43,10 +43,10 @@ legend("topright", bty ="n",
        legend = names(ener[7:9]), cex = 0.9,
        col = c("black", "red", "blue"), lty = 1)
 
-# Bottom right - Plot "Global Rective Power" as a function of time
+# Bottom right - plot "Global Rective Power" as a function of time
 plot(ener$datetime, ener$Global_reactive_power, type = "l", xlab = "datetime",
      ylab = "Global_reactive_power")
 
-# Reset de graphic device and the graphic parameters
+# Reset de graphics device and the graphic parameters
 dev.off()
 par(mfrow = c(1, 1))

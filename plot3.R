@@ -17,18 +17,17 @@ energy <- read.table("household_power_consumption.txt", header = TRUE, sep = ";"
 ener <- subset(energy, Date == "1/2/2007" | Date == "2/2/2007")
 rm(energy)
 
-# Now concatenate the Date and Time variables into a new datetime variable.
+# Concatenate the Date and Time variables into a new variable called datetime.
 ener$datetime <- paste(ener$Date, ener$Time)
 ener$datetime <- strptime(ener$datetime, "%d/%m/%Y %H:%M:%S")
 
-# Set graphic device to PNG and plot the three Submetering variables as a function 
-# of time. Save the result as a 480 x 480 pixel PNG file called plot3.png.
+# Set graphics device to PNG and plot the three Submetering variables as a function of
+# time. Save the result as a 480 x 480 pixel (the default) PNG file called plot3.png.
 png("plot3.png")
 plot(ener$datetime, ener$Sub_metering_1, type = "l", col = "black", xlab = "",
      ylab = "Energy sub metering")
 lines(ener$datetime, ener$Sub_metering_2, col = "red")
 lines(ener$datetime, ener$Sub_metering_3, col = "blue")
-legend("topright", 
-       legend = names(ener[7:9]),
+legend("topright", legend = names(ener[7:9]),
        col = c("black", "red", "blue"), lty = 1)
 dev.off()

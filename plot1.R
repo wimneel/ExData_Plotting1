@@ -13,12 +13,12 @@ energy <- read.table("household_power_consumption.txt", header = TRUE, sep = ";"
 ener <- subset(energy, Date == "1/2/2007" | Date == "2/2/2007")
 rm(energy)
 
-# Now concatenate the Date and Time variables into a new datetime variable.
+# Concatenate the Date and Time variables into a new variable called datetime.
 ener$datetime <- paste(ener$Date, ener$Time)
 ener$datetime <- strptime(ener$datetime, "%d/%m/%Y %H:%M:%S")
 
-# Set graphic device to PNG and draw a histogram of the values of "Global Active Power".
-# Save the result as a 480 x 480 pixel PNG file called plot1.png.
+# Set graphics device to PNG and draw a histogram of the values of "Global Active Power".
+# Save the result as a 480 x 480 pixel (the default) PNG file called plot1.png.
 png("plot1.png")
 hist(ener$Global_active_power, col = "red", main = "Global Active Power",
      xlab = "Global Active Power (kilowatts)")
